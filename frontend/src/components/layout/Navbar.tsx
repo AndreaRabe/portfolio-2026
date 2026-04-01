@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/Badge";
 
 const NAV_LINKS = [
   { label: "About",      href: "#about",      id: "about" },
-  { label: "Work",       href: "#projects",   id: "projects" },
+  { label: "Services",   href: "#services",   id: "services" },
   { label: "Stack",      href: "#stack",      id: "stack" },
   { label: "Experience", href: "#experience", id: "experience" },
   { label: "Contact",    href: "#contact",    id: "contact" },
@@ -32,7 +32,7 @@ export function Navbar() {
           if (entry.isIntersecting) setActiveId(entry.target.id);
         }
       },
-      { threshold: 0.35, rootMargin: "-60px 0px -35% 0px" }
+      { threshold: 0.1, rootMargin: "-60px 0px -20% 0px" }
     );
     ids.forEach((id) => {
       const el = document.getElementById(id);
