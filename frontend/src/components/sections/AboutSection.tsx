@@ -7,9 +7,9 @@ import { useScrollAnimation, fadeUpVariants, staggerContainerVariants } from "@/
 const PILLARS = [
   {
     icon: "⬡",
-    title: "Full-Stack Data",
+    title: "Analyse & Modélisation",
     description:
-      "Du machine learning aux APIs REST, je maîtrise toute la chaîne — analyse, modélisation, visualisation et déploiement web.",
+      "Du nettoyage des données à la modélisation ML, je maîtrise toute la chaîne — analyse exploratoire, feature engineering et interprétation des résultats.",
   },
   {
     icon: "◈",
@@ -94,7 +94,7 @@ export function AboutSection() {
               className="text-center lg:text-left"
             >
               <p className="font-display font-bold text-base text-[var(--color-text)]">Nantenaina Andrea</p>
-              <p className="font-mono text-xs text-[var(--color-cyan)] mt-0.5">Data Scientist & Dev-Fullstack</p>
+              <p className="font-mono text-xs text-[var(--color-cyan)] mt-0.5">Data Analyst & Scientist</p>
             </motion.div>
           </motion.div>
 
@@ -120,20 +120,21 @@ export function AboutSection() {
               <p>
                 Diplômé de l&apos;{" "}
                 <span className="text-[var(--color-text)]">École Nationale d&apos;Informatique</span>{" "}
-                (Master Génie Logiciel &amp; Base de Données), je suis Data Scientist
-                et Développeur Full-Stack spécialisé dans l&apos;analyse de données,
-                le machine learning et la création d&apos;applications web performantes.
+                (Master Génie Logiciel &amp; Base de Données), je suis Data Analyst &amp; Scientist
+                spécialisé dans l&apos;analyse de données, le machine learning et la
+                visualisation d&apos;indicateurs métier.
               </p>
               <p>
-                J&apos;ai travaillé chez MCB Madagascar, Novaniry et l&apos;O.M.N.I.S pour
-                automatiser des processus, construire des{" "}
+                Actuellement chez{" "}
+                <span className="text-[var(--color-text)]">MCB Madagascar</span>,
+                j&apos;automatise des processus, conçois des{" "}
                 <span className="text-[var(--color-text)]">dashboards Power BI</span>{" "}
-                et développer des APIs RESTful et GraphQL robustes.
+                et analyse des données pour alimenter les décisions stratégiques.
               </p>
               <p>
-                Python, React.js, PostgreSQL, Airflow — j&apos;aime les solutions{" "}
-                <span className="text-[var(--color-text)]">fiables et bien conçues</span>,
-                de la donnée brute jusqu&apos;à l&apos;interface utilisateur.
+                Python, PostgreSQL, Power BI, Scikit-learn — j&apos;aime les solutions{" "}
+                <span className="text-[var(--color-text)]">fiables et actionnables</span>,
+                de la donnée brute jusqu&apos;aux insights métier.
               </p>
             </motion.div>
 

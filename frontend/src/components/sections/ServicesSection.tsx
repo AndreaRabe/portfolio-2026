@@ -7,45 +7,45 @@ import { useScrollAnimation, fadeUpVariants, staggerContainerVariants } from "@/
 const SERVICES = [
   {
     icon: "⬡",
-    title: "Data Pipeline Design",
+    title: "Analyse & Exploration de données",
     description:
-      "Conception et implémentation de pipelines ELT/ETL robustes avec Airflow, dbt et Spark. Monitoring, alertes et documentation inclus.",
-    tags: ["Airflow", "dbt", "Spark"],
+      "Exploration, nettoyage et analyse statistique de vos jeux de données pour révéler les patterns cachés et répondre aux questions métier.",
+    tags: ["Python", "Pandas", "PostgreSQL"],
   },
   {
     icon: "◈",
-    title: "Dashboard & Reporting",
+    title: "Dashboards Power BI",
     description:
-      "Tableaux de bord analytiques clairs et actionnables avec Metabase, Looker ou Superset. Du modèle de données à la visualisation.",
-    tags: ["Metabase", "Looker", "SQL"],
+      "Tableaux de bord interactifs et clairs sous Power BI — du modèle de données à la visualisation, pour des décisions éclairées en temps réel.",
+    tags: ["Power BI", "DAX", "SQL"],
   },
   {
     icon: "◎",
-    title: "Data Quality & Governance",
+    title: "Machine Learning",
     description:
-      "Tests automatisés, documentation des assets data, alertes de fraîcheur et contrats de données pour des insights de confiance.",
-    tags: ["Great Expectations", "dbt tests", "Catalog"],
+      "Conception et entraînement de modèles prédictifs adaptés à vos données : classification, régression, clustering et évaluation des performances.",
+    tags: ["Scikit-learn", "Python", "NumPy"],
   },
   {
     icon: "⬢",
-    title: "ETL / ELT Architecture",
+    title: "Automatisation de processus",
     description:
-      "Choix de stack, design des modèles Lakehouse/DWH, stratégie de partitionnement et optimisation des coûts cloud.",
-    tags: ["BigQuery", "Snowflake", "Delta Lake"],
+      "Automatisation des tâches répétitives et des flux de données avec Python et Power Automate pour gagner du temps et réduire les erreurs.",
+    tags: ["Python", "Power Automate", "Airflow"],
   },
   {
     icon: "◇",
-    title: "ML Feature Engineering",
+    title: "Modélisation & Bases de données",
     description:
-      "Préparation des features pour les modèles ML : feature store, pipelines de transformation et monitoring de dérive.",
-    tags: ["Feature Store", "Python", "Pandas"],
+      "Conception de schémas relationnels optimisés, requêtes SQL avancées et gestion de bases de données PostgreSQL et MySQL.",
+    tags: ["PostgreSQL", "MySQL", "SQL"],
   },
   {
     icon: "▣",
-    title: "Data Strategy Consulting",
+    title: "Reporting & Réconciliation",
     description:
-      "Audit de maturité data, feuille de route, choix technologiques et accompagnement à la mise en place d'une culture data.",
-    tags: ["Audit", "Roadmap", "Coaching"],
+      "Rapports automatisés, réconciliation de données multi-sources et synthèses Excel adaptées aux besoins des équipes métier.",
+    tags: ["Excel", "Power BI", "Python"],
   },
 ] as const;
 

@@ -5,16 +5,16 @@ import { motion, AnimatePresence } from "framer-motion";
 
 /* ── Terminal lines ─────────────────────────────────────────── */
 const LINES = [
-  { prefix: ">", text: " Initialisation du pipeline...",     ms: 400  },
-  { prefix: ">", text: " Connexion à PostgreSQL ✓",         ms: 1200 },
-  { prefix: "$", text: " python analyze.py --mode=full",     ms: 2200 },
-  { prefix: ">", text: " 1 245 892 lignes traitées ✓",      ms: 3400 },
-  { prefix: "$", text: " power_bi --render dashboards",      ms: 4600 },
-  { prefix: ">", text: " Prêt. Bienvenue sur mon portfolio.", ms: 5800 },
+  { prefix: ">", text: " Initialisation du pipeline...",     ms: 600  },
+  { prefix: ">", text: " Connexion à PostgreSQL ✓",         ms: 1800 },
+  { prefix: "$", text: " python analyze.py --mode=full",     ms: 3200 },
+  { prefix: ">", text: " 1 245 892 lignes traitées ✓",      ms: 5000 },
+  { prefix: "$", text: " power_bi --render dashboards",      ms: 6800 },
+  { prefix: ">", text: " Prêt. Bienvenue sur mon portfolio.", ms: 8600 },
 ] as const;
 
-const PROGRESS_DURATION = 6500; // ms until bar hits 100%
-const EXIT_DELAY        = 7200; // ms until overlay leaves
+const PROGRESS_DURATION = 9500; // ms until bar hits 100%
+const EXIT_DELAY        = 10500; // ms until overlay leaves
 
 /* ── Background data noise ──────────────────────────────────── */
 const NOISE = Array.from({ length: 48 }, (_, i) => ({

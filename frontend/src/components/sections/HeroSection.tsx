@@ -20,7 +20,7 @@ const METRICS = [
   { value: 2,  suffix: "",    label: "diplômes" },
 ] as const;
 
-const TITLE_WORDS = ["Data", "Scientist", "&", "Dev-Fullstack."];
+const TITLE_WORDS = ["Data", "Analyst", "&", "Scientist."];
 
 // Word-by-word reveal
 const wordVariants = {
@@ -108,7 +108,7 @@ export function HeroSection() {
               animate="visible"
               className={`
                 inline-block mr-[0.25em]
-                ${word === "&" || word === "Dev-Fullstack." ? "text-gradient-cyan" : "text-[var(--color-text)]"}
+                ${word === "&" || word === "Scientist." ? "text-gradient-cyan" : "text-[var(--color-text)]"}
               `}
             >
               {word}
@@ -121,11 +121,10 @@ export function HeroSection() {
           {...fadeUp(0.6)}
           className="font-mono text-[var(--color-muted)] text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Diplômé de l&apos;ENI, je conçois des{" "}
-          <span className="text-[var(--color-text)]">solutions data-driven</span>{" "}
-          et des{" "}
-          <span className="text-[var(--color-text)]">applications web full-stack</span>.
-          Machine learning, dashboards Power BI, APIs REST — de l&apos;analyse à la production.
+          Diplômé de l&apos;ENI, je transforme la donnée brute en{" "}
+          <span className="text-[var(--color-text)]">insights actionnables</span>.
+          Analyse, machine learning, dashboards Power BI —{" "}
+          <span className="text-[var(--color-text)]">de la donnée à la décision</span>.
         </motion.p>
 
         {/* CTAs */}

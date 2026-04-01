@@ -36,15 +36,15 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Andrea — Data Scientist & Dev-Fullstack",
+    default: "Andrea — Data Analyst & Scientist",
     template: "%s | Andrea",
   },
   description:
-    "Data Scientist & Développeur Full-Stack — analyse de données, machine learning, dashboards Power BI et applications web. Diplômé ENI, basé à Antananarivo, Madagascar.",
+    "Data Analyst & Scientist — analyse de données, machine learning, dashboards Power BI. Diplômé ENI, actuellement chez MCB Madagascar, basé à Antananarivo.",
   keywords: [
-    "Data Scientist", "Dev Fullstack", "freelance", "Machine Learning",
-    "Power BI", "Python", "Django", "FastAPI", "React", "PostgreSQL",
-    "Antananarivo", "Madagascar", "ENI", "dashboard", "API REST",
+    "Data Analyst", "Data Scientist", "freelance", "Machine Learning",
+    "Power BI", "Python", "PostgreSQL", "SQL", "Scikit-learn",
+    "Antananarivo", "Madagascar", "ENI", "dashboard", "MCB",
   ],
   authors: [{ name: "Nantenaina Andrea RABEMANANTSOA" }],
   creator: "Nantenaina Andrea RABEMANANTSOA",
@@ -52,23 +52,23 @@ export const metadata: Metadata = {
     type: "website",
     locale: "fr_FR",
     url: SITE_URL,
-    siteName: "Andrea — Data Scientist & Dev-Fullstack",
-    title: "Andrea — Data Scientist & Dev-Fullstack",
+    siteName: "Andrea — Data Analyst & Scientist",
+    title: "Andrea — Data Analyst & Scientist",
     description:
-      "Data Scientist & Développeur Full-Stack — machine learning, Power BI, APIs REST, basé à Antananarivo.",
+      "Data Analyst & Scientist — machine learning, Power BI, analyse de données, basé à Antananarivo.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Andrea — Data Engineer & Analyst",
+        alt: "Andrea — Data Analyst & Scientist",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Andrea — Data Scientist & Dev-Fullstack",
-    description: "Data Scientist & Dev-Fullstack — machine learning, Power BI, APIs REST, Antananarivo.",
+    title: "Andrea — Data Analyst & Scientist",
+    description: "Data Analyst & Scientist — machine learning, Power BI, analyse de données, Antananarivo.",
     images: ["/og-image.png"],
   },
   robots: {
