@@ -187,7 +187,7 @@ export function StackSection() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="flex flex-wrap gap-2"
+            className="flex flex-nowrap overflow-x-auto gap-2 pb-1 sm:flex-wrap sm:pb-0 scrollbar-hide"
             role="tablist"
             aria-label="Filtrer par catégorie"
           >

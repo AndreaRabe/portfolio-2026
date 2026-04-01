@@ -50,7 +50,7 @@ export function HeroSection() {
     <section
       ref={sectionRef}
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-16"
       aria-label="Introduction"
     >
       {/* Three.js particle background */}
@@ -98,7 +98,7 @@ export function HeroSection() {
         </motion.div>
 
         {/* Main title */}
-        <h1 className="font-display font-bold text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
+        <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.05] mb-6">
           {TITLE_WORDS.map((word, i) => (
             <motion.span
               key={word + i}
@@ -131,14 +131,15 @@ export function HeroSection() {
         {/* CTAs */}
         <motion.div
           {...fadeUp(0.75)}
-          className="flex flex-wrap gap-4 justify-center mb-16"
+          className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-16 w-full sm:w-auto px-4 sm:px-0"
         >
-          <Button variant="primary" size="lg" onClick={scrollToWork}>
+          <Button variant="primary" size="lg" onClick={scrollToWork} className="w-full sm:w-auto">
             Voir mes projets
           </Button>
           <Button
             variant="secondary"
             size="lg"
+            className="w-full sm:w-auto"
             onClick={() => {
               const a = document.createElement("a");
               a.href = "/CV_Nantenaina_Andrea.pdf";

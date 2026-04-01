@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { useScrollAnimation, fadeUpVariants, staggerContainerVariants } from "@/hooks/useScrollAnimation";
@@ -46,36 +45,34 @@ export function AboutSection() {
           About
         </motion.p>
 
-        <div ref={ref} className="grid grid-cols-1 lg:grid-cols-[280px_1fr_1fr] gap-10 lg:gap-12 items-start">
+        <div ref={ref} className="grid grid-cols-1 md:grid-cols-[200px_1fr] lg:grid-cols-[260px_1fr_1fr] gap-8 lg:gap-12 items-start">
 
           {/* Col 1 — Photo */}
           <motion.div
             variants={fadeUpVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="flex flex-col items-center lg:items-start gap-5"
+            className="flex flex-col items-center md:items-start gap-5 col-span-1"
           >
             {/* Photo with gradient glow border */}
             <motion.div
               whileHover={{ scale: 1.03, rotate: -1 }}
               transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-              className="relative w-52 h-52 lg:w-full lg:h-auto lg:aspect-square"
+              className="relative w-40 h-40 sm:w-52 sm:h-52 md:w-full md:h-auto md:aspect-square"
             >
               {/* Gradient border + glow */}
               <div
-                className="rounded-full overflow-hidden border-2 border-transparent"
+                className="w-full h-full rounded-full overflow-hidden border-2 border-transparent"
                 style={{
                   background: "linear-gradient(#050508,#050508) padding-box, linear-gradient(135deg,rgba(0,212,255,0.7),rgba(123,97,255,0.7)) border-box",
                   boxShadow: "0 0 40px rgba(0,212,255,0.18), 0 0 80px rgba(123,97,255,0.08)",
                 }}
               >
-                <Image
-                  src="/andrea.jpg"
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/andrea.jpg`}
                   alt="Nantenaina Andrea RABEMANANTSOA"
-                  width={280}
-                  height={280}
-                  className="w-full h-full object-cover rounded-full"
-                  priority
+                  className="w-full h-full object-cover"
                 />
               </div>
               {/* Available badge */}
@@ -102,7 +99,7 @@ export function AboutSection() {
           </motion.div>
 
           {/* Col 2 — Bio */}
-          <div>
+          <div className="md:col-span-1 lg:col-span-1">
             <motion.h2
               variants={fadeUpVariants}
               initial="hidden"
@@ -171,7 +168,7 @@ export function AboutSection() {
             variants={staggerContainerVariants}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-4 md:col-span-2 lg:col-span-1"
           >
             {PILLARS.map((pillar) => (
               <GlassCard

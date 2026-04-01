@@ -191,12 +191,12 @@ export function ExperienceSection() {
 
 function TimelineItem({ pos }: { pos: Position }) {
   return (
-    <motion.div variants={fadeUpVariants} className="flex gap-6">
+    <motion.div variants={fadeUpVariants} className="flex gap-3 sm:gap-6">
       {/* Dot */}
       <div className="flex-shrink-0 flex flex-col items-center" aria-hidden="true">
         <div
           className={`
-            relative z-10 w-10 h-10 rounded-full flex items-center justify-center
+            relative z-10 w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center
             ${pos.current
               ? "bg-[rgba(0,212,255,0.15)] border border-[var(--color-cyan)] glow-cyan"
               : "bg-[rgba(255,255,255,0.04)] border border-[var(--color-border)]"
@@ -211,7 +211,7 @@ function TimelineItem({ pos }: { pos: Position }) {
       </div>
 
       {/* Card */}
-      <GlassCard hoverable className="flex-1 p-6 mb-0">
+      <GlassCard hoverable className="flex-1 p-4 sm:p-6 mb-0">
         {/* Header */}
         <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
           <div>
