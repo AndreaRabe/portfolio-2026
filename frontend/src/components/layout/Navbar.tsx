@@ -56,8 +56,15 @@ export function Navbar() {
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className={`
           fixed top-0 inset-x-0 z-50 transition-all duration-300
-          ${scrolled ? "glass border-b border-[rgba(255,255,255,0.06)]" : "bg-transparent"}
+          ${scrolled
+            ? "border-b border-[rgba(255,255,255,0.1)] shadow-[0_4px_30px_rgba(0,0,0,0.5)]"
+            : "bg-transparent"}
         `}
+        style={scrolled ? {
+          background: "rgba(5,5,8,0.85)",
+          backdropFilter: "blur(24px) saturate(180%)",
+          WebkitBackdropFilter: "blur(24px) saturate(180%)",
+        } : undefined}
       >
         <nav
           className="max-w-7xl mx-auto px-6 h-16 grid grid-cols-3 items-center"
