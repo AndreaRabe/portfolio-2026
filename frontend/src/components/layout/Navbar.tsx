@@ -60,7 +60,7 @@ export function Navbar() {
         `}
       >
         <nav
-          className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between"
+          className="max-w-7xl mx-auto px-6 h-16 grid grid-cols-3 items-center"
           aria-label="Navigation principale"
         >
           {/* Logo */}
@@ -72,8 +72,8 @@ export function Navbar() {
             A<span className="text-[var(--color-muted)]">.</span>
           </a>
 
-          {/* Desktop nav */}
-          <ul className="hidden md:flex items-center gap-1" role="list">
+          {/* Desktop nav — centré */}
+          <ul className="hidden md:flex items-center justify-center gap-1" role="list">
             {NAV_LINKS.map((link) => {
               const isActive = activeId === link.id;
               return (
@@ -105,7 +105,7 @@ export function Navbar() {
           </ul>
 
           {/* Right side */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center justify-end gap-4">
             <Badge variant="success" pulse className="hidden sm:inline-flex">
               Available
             </Badge>
