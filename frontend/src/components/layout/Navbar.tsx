@@ -67,7 +67,7 @@ export function Navbar() {
         } : undefined}
       >
         <nav
-          className="max-w-7xl mx-auto px-6 h-16 grid grid-cols-3 items-center"
+          className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between md:grid md:grid-cols-3"
           aria-label="Navigation principale"
         >
           {/* Logo */}
