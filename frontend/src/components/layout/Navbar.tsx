@@ -146,38 +146,61 @@ export function Navbar() {
         {menuOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
-            animate={{ opacity: 1, clipPath: "inset(0 0 0% 0)" }}
-            exit={{ opacity: 0, clipPath: "inset(0 0 100% 0)" }}
-            transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-40 glass flex flex-col items-center justify-center gap-8"
+            initial={{ opacity: 0, y: -16 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -16 }}
+            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+            className="fixed inset-0 z-[60] flex flex-col items-center justify-center gap-10"
+            style={{
+              background: "rgba(5,5,8,0.97)",
+              backdropFilter: "blur(20px) saturate(160%)",
+              WebkitBackdropFilter: "blur(20px) saturate(160%)",
+            }}
           >
+            {/* Close button */}
+            <button
+              onClick={closeMenu}
+              aria-label="Fermer le menu"
+              className="absolute top-5 right-6 p-2 text-[var(--color-muted)] hover:text-[var(--color-text)] transition-colors"
+            >
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+              </svg>
+            </button>
+
             <Badge variant="success" pulse>Available for work</Badge>
 
             <nav aria-label="Menu mobile">
-              <ul className="flex flex-col items-center gap-2" role="list">
-                {NAV_LINKS.map((link, i) => (
-                  <motion.li
-                    key={link.href}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.05 * i, duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
-                  >
-                    <a
-                      href={link.href}
-                      onClick={closeMenu}
-                      className="
-                        block px-8 py-3 font-display text-3xl font-bold
-                        text-[var(--color-muted)] hover:text-[var(--color-text)]
-                        hover:text-gradient-cyan transition-colors duration-200
-                      "
+              <ul className="flex flex-col items-center gap-1" role="list">
+                {NAV_LINKS.map((link, i) => {
+                  const isActive = activeId === link.id;
+                  return (
+                    <motion.li
+                      key={link.href}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.04 * i, duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
                     >
-                      {link.label}
-                    </a>
-                  </motion.li>
-                ))}
+                      <a
+                        href={link.href}
+                        onClick={closeMenu}
+                        className={`
+                          block px-8 py-3 font-display text-2xl font-bold text-center
+                          transition-colors duration-200
+                          ${isActive ? "text-[var(--color-cyan)]" : "text-[var(--color-text)] hover:text-[var(--color-cyan)]"}
+                        `}
+                      >
+                        {link.label}
+                      </a>
+                    </motion.li>
+                  );
+                })}
               </ul>
             </nav>
+
+            <p className="font-mono text-xs text-[var(--color-muted)] tracking-widest uppercase">
+              Antananarivo, Madagascar
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
