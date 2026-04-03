@@ -42,8 +42,8 @@ const fadeUp = (delay = 0) => ({
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null);
 
-  const scrollToWork = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToServices = () => {
+    document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -132,22 +132,18 @@ export function HeroSection() {
           {...fadeUp(0.75)}
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-16 w-full sm:w-auto px-4 sm:px-0"
         >
-          <Button variant="primary" size="lg" onClick={scrollToWork} className="w-full sm:w-auto">
-            Voir mes projets
+          <Button variant="primary" size="lg" onClick={scrollToServices} className="w-full sm:w-auto">
+            Voir mes services
           </Button>
-          <Button
-            variant="secondary"
-            size="lg"
+          <a
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/CV_Nantenaina_Andrea.pdf`}
+            download="CV_Nantenaina_Andrea.pdf"
             className="w-full sm:w-auto"
-            onClick={() => {
-              const a = document.createElement("a");
-              a.href = "/CV_Nantenaina_Andrea.pdf";
-              a.download = "CV_Nantenaina_Andrea.pdf";
-              a.click();
-            }}
           >
-            Télécharger mon CV
-          </Button>
+            <Button variant="secondary" size="lg" className="w-full">
+              Télécharger mon CV
+            </Button>
+          </a>
         </motion.div>
 
         {/* Metrics */}

@@ -8,12 +8,12 @@ export function Footer() {
     >
       <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <p className="font-mono text-xs text-[var(--color-muted)]">
-          © {year} Andrea — Data Engineer & Analyst
+          © {year} Andrea — Data Analyst & Scientist
         </p>
         <div className="flex items-center gap-6">
           {[
-            { label: "GitHub",   href: "https://github.com" },
-            { label: "LinkedIn", href: "https://linkedin.com" },
+            { label: "GitHub",   href: "https://github.com/AndreaRabe" },
+            { label: "LinkedIn", href: "https://www.linkedin.com/in/nantenaina-andrea-rabemanantsoa-95658324b/" },
           ].map((link) => (
             <a
               key={link.label}

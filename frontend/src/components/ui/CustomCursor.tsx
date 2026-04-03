@@ -22,6 +22,9 @@ export function CustomCursor() {
   const dotScale  = useSpring(useTransform(hovered, [0, 1], [1, 0]), { damping: 22, stiffness: 300 });
 
   useEffect(() => {
+    // Don't activate on touch/pointer-coarse devices (mobile, tablet)
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     document.documentElement.style.cursor = "none";
 
     const move = (e: MouseEvent) => {
