@@ -14,17 +14,17 @@ const ParticleGraph = dynamic(
 );
 
 const METRICS = [
-  { value: 6,  suffix: "+",   label: "projets livrés" },
-  { value: 3,  suffix: "+",   label: "entreprises" },
-  { value: 3,  suffix: " ans", label: "d'expérience" },
-  { value: 2,  suffix: "",    label: "diplômes" },
+  { value: 6, suffix: "+", label: "projets livrés" },
+  { value: 3, suffix: "+", label: "entreprises" },
+  { value: 3, suffix: " ans", label: "d'expérience" },
+  { value: 2, suffix: "", label: "diplômes" },
 ] as const;
 
 const TITLE_WORDS = ["Data", "Analyst", "&", "Scientist."];
 
 // Word-by-word reveal
 const wordVariants = {
-  hidden:  { opacity: 0, y: 30, filter: "blur(8px)" },
+  hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
@@ -34,8 +34,8 @@ const wordVariants = {
 };
 
 const fadeUp = (delay = 0) => ({
-  initial:   { opacity: 0, y: 24 },
-  animate:   { opacity: 1, y: 0 },
+  initial: { opacity: 0, y: 24 },
+  animate: { opacity: 1, y: 0 },
   transition: { delay, duration: 0.6, ease: EASE_OUT_EXPO },
 });
 
@@ -90,11 +90,17 @@ export function HeroSection() {
           {...fadeUp(0)}
           className="inline-flex items-center gap-3 mb-6"
         >
-          <span className="w-8 h-px bg-gradient-to-r from-transparent to-[var(--color-cyan)]" aria-hidden="true" />
+          <span
+            className="w-8 h-px bg-gradient-to-r from-transparent to-[var(--color-cyan)]"
+            aria-hidden="true"
+          />
           <p className="font-label text-[var(--color-cyan)] text-sm tracking-[0.25em] uppercase">
             Freelance · Remote · Antananarivo, Madagascar
           </p>
-          <span className="w-8 h-px bg-gradient-to-l from-transparent to-[var(--color-cyan)]" aria-hidden="true" />
+          <span
+            className="w-8 h-px bg-gradient-to-l from-transparent to-[var(--color-cyan)]"
+            aria-hidden="true"
+          />
         </motion.div>
 
         {/* Main title */}
@@ -108,7 +114,11 @@ export function HeroSection() {
               animate="visible"
               className={`
                 inline-block mr-[0.25em]
-                ${word === "&" || word === "Scientist." ? "text-gradient-cyan" : "text-[var(--color-text)]"}
+                ${
+                  word === "&" || word === "Scientist."
+                    ? "text-gradient-cyan"
+                    : "text-[var(--color-text)]"
+                }
               `}
             >
               {word}
@@ -121,10 +131,15 @@ export function HeroSection() {
           {...fadeUp(0.6)}
           className="font-mono text-[var(--color-muted)] text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Diplômé de l&apos;ENI, je transforme la donnée brute en{" "}
-          <span className="text-[var(--color-text)]">insights actionnables</span>.
-          Analyse, machine learning, dashboards Power BI —{" "}
-          <span className="text-[var(--color-text)]">de la donnée à la décision</span>.
+          Diplômé de l&apos;ENI, je transforme les données brutes en{" "}
+          <span className="text-[var(--color-text)]">
+            insights actionnables
+          </span>
+          . Analyse, machine learning, dashboards Power BI —{" "}
+          <span className="text-[var(--color-text)]">
+            des données à la décision
+          </span>
+          .
         </motion.p>
 
         {/* CTAs */}
@@ -132,11 +147,18 @@ export function HeroSection() {
           {...fadeUp(0.75)}
           className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-12 sm:mb-16 w-full sm:w-auto px-4 sm:px-0"
         >
-          <Button variant="primary" size="lg" onClick={scrollToServices} className="w-full sm:w-auto">
+          <Button
+            variant="primary"
+            size="lg"
+            onClick={scrollToServices}
+            className="w-full sm:w-auto"
+          >
             Voir mes services
           </Button>
           <a
-            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/CV_Nantenaina_Andrea.pdf`}
+            href={`${
+              process.env.NEXT_PUBLIC_BASE_PATH ?? ""
+            }/CV_Nantenaina_Andrea.pdf`}
             download="CV_Nantenaina_Andrea.pdf"
             className="w-full sm:w-auto"
           >

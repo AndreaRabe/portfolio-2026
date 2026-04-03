@@ -1,8 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { useScrollAnimation, fadeUpVariants, staggerContainerVariants } from "@/hooks/useScrollAnimation";
+import {
+  fadeUpVariants,
+  staggerContainerVariants,
+  useScrollAnimation,
+} from "@/hooks/useScrollAnimation";
+import { motion } from "framer-motion";
 
 const PILLARS = [
   {
@@ -45,8 +49,10 @@ export function AboutSection() {
           About
         </motion.p>
 
-        <div ref={ref} className="grid grid-cols-1 md:grid-cols-[200px_1fr] lg:grid-cols-[260px_1fr_1fr] gap-8 lg:gap-12 items-start">
-
+        <div
+          ref={ref}
+          className="grid grid-cols-1 md:grid-cols-[200px_1fr] lg:grid-cols-[260px_1fr_1fr] gap-8 lg:gap-12 items-start"
+        >
           {/* Col 1 — Photo */}
           <motion.div
             variants={fadeUpVariants}
@@ -64,8 +70,10 @@ export function AboutSection() {
               <div
                 className="w-full h-full rounded-full overflow-hidden border-2 border-transparent"
                 style={{
-                  background: "linear-gradient(#050508,#050508) padding-box, linear-gradient(135deg,rgba(0,212,255,0.7),rgba(123,97,255,0.7)) border-box",
-                  boxShadow: "0 0 40px rgba(0,212,255,0.18), 0 0 80px rgba(123,97,255,0.08)",
+                  background:
+                    "linear-gradient(#050508,#050508) padding-box, linear-gradient(135deg,rgba(0,212,255,0.7),rgba(123,97,255,0.7)) border-box",
+                  boxShadow:
+                    "0 0 40px rgba(0,212,255,0.18), 0 0 80px rgba(123,97,255,0.08)",
                 }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -81,7 +89,9 @@ export function AboutSection() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#22c55e] opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-[#22c55e]" />
                 </span>
-                <span className="font-mono text-[10px] text-[#22c55e] font-medium">Open to work</span>
+                <span className="font-mono text-[10px] text-[#22c55e] font-medium">
+                  Open to work
+                </span>
               </div>
             </motion.div>
 
@@ -93,8 +103,12 @@ export function AboutSection() {
               transition={{ delay: 0.1 }}
               className="text-center lg:text-left"
             >
-              <p className="font-display font-bold text-base text-[var(--color-text)]">Nantenaina Andrea</p>
-              <p className="font-mono text-xs text-[var(--color-cyan)] mt-0.5">Data Analyst & Scientist</p>
+              <p className="font-display font-bold text-base text-[var(--color-text)]">
+                Nantenaina Andrea
+              </p>
+              <p className="font-mono text-xs text-[var(--color-cyan)] mt-0.5">
+                Data Analyst & Scientist
+              </p>
             </motion.div>
           </motion.div>
 
@@ -106,7 +120,7 @@ export function AboutSection() {
               animate={isInView ? "visible" : "hidden"}
               className="font-display font-bold text-4xl sm:text-5xl text-[var(--color-text)] mb-6 leading-tight"
             >
-              Transformer la donnée en{" "}
+              Transformer les données en{" "}
               <span className="text-gradient-cyan">levier de décision</span>.
             </motion.h2>
 
@@ -119,22 +133,31 @@ export function AboutSection() {
             >
               <p>
                 Diplômé de l&apos;{" "}
-                <span className="text-[var(--color-text)]">École Nationale d&apos;Informatique</span>{" "}
-                (Master Génie Logiciel &amp; Base de Données), je suis Data Analyst &amp; Scientist
-                spécialisé dans l&apos;analyse de données, le machine learning et la
-                visualisation d&apos;indicateurs métier.
+                <span className="text-[var(--color-text)]">
+                  École Nationale d&apos;Informatique
+                </span>{" "}
+                (Master Génie Logiciel &amp; Base de Données), je suis Data
+                Analyst &amp; Scientist spécialisé dans l&apos;analyse de
+                données, le machine learning et la visualisation
+                d&apos;indicateurs métier.
               </p>
               <p>
                 Actuellement chez{" "}
-                <span className="text-[var(--color-text)]">MCB Madagascar</span>,
-                j&apos;automatise des processus, conçois des{" "}
-                <span className="text-[var(--color-text)]">dashboards Power BI</span>{" "}
-                et analyse des données pour alimenter les décisions stratégiques.
+                <span className="text-[var(--color-text)]">MCB Madagascar</span>
+                , j&apos;automatise des processus, conçois des{" "}
+                <span className="text-[var(--color-text)]">
+                  dashboards Power BI
+                </span>{" "}
+                et analyse des données pour alimenter les décisions
+                stratégiques.
               </p>
               <p>
-                Python, PostgreSQL, Power BI, Scikit-learn — j&apos;aime les solutions{" "}
-                <span className="text-[var(--color-text)]">fiables et actionnables</span>,
-                de la donnée brute jusqu&apos;aux insights métier.
+                Python, PostgreSQL, Power BI, Scikit-learn — j&apos;aime les
+                solutions{" "}
+                <span className="text-[var(--color-text)]">
+                  fiables et actionnables
+                </span>
+                , des données brutes jusqu&apos;aux insights métier.
               </p>
             </motion.div>
 
@@ -147,7 +170,12 @@ export function AboutSection() {
               className="mt-8 flex flex-wrap gap-4"
             >
               <div className="glass rounded-xl px-4 py-2 flex items-center gap-2">
-                <span className="text-[var(--color-cyan)] text-lg" aria-hidden="true">◎</span>
+                <span
+                  className="text-[var(--color-cyan)] text-lg"
+                  aria-hidden="true"
+                >
+                  ◎
+                </span>
                 <span className="font-mono text-sm text-[var(--color-muted)]">
                   Antananarivo, Madagascar — Remote OK
                 </span>
